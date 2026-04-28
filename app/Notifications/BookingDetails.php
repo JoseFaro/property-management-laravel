@@ -68,14 +68,14 @@ class BookingDetails extends Notification
 
         // subject
         if ($this->isNew) {
-            $subject = __('Palmera Vacations NEW RESERVATION') . ' #' . $this->booking->id;
+            $subject = __('NEW RESERVATION') . ' #' . $this->booking->id;
         } else {
             if ($this->isDeleted) {
-                $subject = __('Palmera Vacations') . ' ' . 'RESERVATION DELETED' . ' #' . $this->booking->id;
+                $subject = 'RESERVATION DELETED' . ' #' . $this->booking->id;
             } else if ($this->booking->is_cancelled) {
-                $subject = __('Palmera Vacations') . ' ' . 'RESERVATION CANCELLED' . ' #' . $this->booking->id;
+                $subject = 'RESERVATION CANCELLED' . ' #' . $this->booking->id;
             } else {
-                $subject = __('Palmera Vacations') . ' ' . 'RESERVATION UPDATE' . ' #' . $this->booking->id;
+                $subject = 'RESERVATION UPDATE' . ' #' . $this->booking->id;
             }
         }
 
@@ -224,20 +224,17 @@ class BookingDetails extends Notification
             if (!$this->isTeam) {
                 // pv address
                 $mailMsg->line(new HtmlString('––––––––––––––––––––––––––––––––––––––––'));
-                $mailMsg->line(new HtmlString('Palmera Vacations'));
-                $mailMsg->line(new HtmlString('Puerto Vallarta'));
-                $mailMsg->line(new HtmlString('<a href="mailto:vallarta@palmeravacations.com">vallarta@palmeravacations.com</a>'));
-                $mailMsg->line(new HtmlString('Tel: +52 (322) 223-0101'));
-                $mailMsg->line(new HtmlString('US/Canada: (323) 250-7721'));
-                $mailMsg->line(new HtmlString('Libertad 349, Centro'));
-                $mailMsg->line(new HtmlString('Puerto Vallarta, Jalisco, México 48380'));
+                $mailMsg->line(new HtmlString('<a href="mailto:info@clientsite.com">info@clientsite.com</a>'));
+                $mailMsg->line(new HtmlString('Tel: +52 (555) 555-4444'));
+                $mailMsg->line(new HtmlString('US/Canada: (555) 555-5555'));
+                $mailMsg->line(new HtmlString('Libertad 222, Centro'));
+                $mailMsg->line(new HtmlString('México 44444'));
 
                 // mz address
-                $mailMsg->line(new HtmlString('Mazatlan'));
-                $mailMsg->line(new HtmlString('<a href="mailto:mazatlan@palmeravacations.com">mazatlan@palmeravacations.com</a>'));
-                $mailMsg->line(new HtmlString('Tel: +52 (669) 913-5188'));
-                $mailMsg->line(new HtmlString('Ave. Playa Gaviotas 409 Local 27'));
-                $mailMsg->line(new HtmlString('Mazatlán, Sinaloa, México 82110'));
+                $mailMsg->line(new HtmlString('<a href="mailto:info@clientsite.com">info@clientsite.com</a>'));
+                $mailMsg->line(new HtmlString('Tel: +52 (333) 333-2222'));
+                $mailMsg->line(new HtmlString('Ave. Cruz 22'));
+                $mailMsg->line(new HtmlString('México 44444'));
             }
 
             // end of message block
@@ -394,20 +391,10 @@ class BookingDetails extends Notification
             if (!$this->isTeam) {
                 // pv address
                 $mailMsg->line(new HtmlString('––––––––––––––––––––––––––––––––––––––––'));
-                $mailMsg->line(new HtmlString('Palmera Vacations'));
-                $mailMsg->line(new HtmlString('Puerto Vallarta'));
-                $mailMsg->line(new HtmlString('<a href="mailto:vallarta@palmeravacations.com">vallarta@palmeravacations.com</a>'));
-                $mailMsg->line(new HtmlString('Tel: +52 (322) 223-0101'));
-                $mailMsg->line(new HtmlString('US/Canada: (323) 250-7721'));
-                $mailMsg->line(new HtmlString('Libertad 349, Centro'));
-                $mailMsg->line(new HtmlString('Puerto Vallarta, Jalisco, México 48380'));
-
-                // mz address
-                $mailMsg->line(new HtmlString('Mazatlan'));
-                $mailMsg->line(new HtmlString('<a href="mailto:mazatlan@palmeravacations.com">mazatlan@palmeravacations.com</a>'));
-                $mailMsg->line(new HtmlString('Tel: +52 (669) 913-5188'));
-                $mailMsg->line(new HtmlString('Ave. Playa Gaviotas 409 Local 27'));
-                $mailMsg->line(new HtmlString('Mazatlán, Sinaloa, México 82110'));
+                $mailMsg->line(new HtmlString('<a href="mailto:info@clientsite.com">info@clientsite.com</a>'));
+                $mailMsg->line(new HtmlString('Tel: +52 (222) 333-333'));
+                $mailMsg->line(new HtmlString('US/Canada: (222) 222-2222'));
+                $mailMsg->line(new HtmlString('Libertad 333'));
             }
 
 
